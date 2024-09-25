@@ -3,6 +3,8 @@ import subprocess
 import tkinter as tk
 from tkinter import ttk
 from threading import Thread
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 
 stop_timer = False
 
@@ -52,9 +54,9 @@ def on_close():
     stop_timer = True
     root.destroy()
 
-root = tk.Tk()
+root = ttk.Window(themename="minty")
 root.title("Medusa")
-root.geometry("300x200")
+root.geometry("400x300")
 
 label_interval = tk.Label(root, text="Choose the interval between breaks (in minutes):")
 label_interval.pack(pady=10)
