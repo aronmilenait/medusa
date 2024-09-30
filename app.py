@@ -13,6 +13,13 @@ def on_start_button_click():
     try:
         break_interval_minutes = int(interval_minutes_entry.get())
         break_duration_minutes = int(break_duration_minutes_entry.get())
+        
+        for widget in root.winfo_children():
+            widget.pack_forget()
+            
+        message = f"You set up the timer to notify you to rest your eyes every {break_interval_minutes} minutes. Please, don't close the window."
+        label_message = tk.Label(root, text=message, wraplength=300, justify=tk.CENTER)
+        label_message.pack(pady=10)
 
         button_start.config(state=tk.DISABLED)
         start_timer(break_interval_minutes, break_duration_minutes, on_timer_end, on_break_end)
