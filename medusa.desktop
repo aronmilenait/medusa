@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Medusa
+Comment=System utility that reminds you to take regular short breaks to rest your eyes.
+Exec=./dist/app
+Icon=./icon.png 
+Terminal=false
+Type=Application
+Categories=Utility;
